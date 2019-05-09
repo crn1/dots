@@ -1,0 +1,15 @@
+[user]
+	name = crn1
+	email = gluvajic@aol.com
+[core]
+	editor = vim
+[color]
+	ui = auto
+[diff]
+	tool = vimdiff
+[merge]
+	tool = vimdiff
+[github]
+	user = crn1
+[format]
+	pretty = oneline

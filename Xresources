@@ -1,0 +1,18 @@
+! General
+*foreground: #FFFFFF
+*background: #000000
+*scrollBar: false
+*font: xft:Ubuntu Mono:style=Regular:size=13:antialias=true
+
+! XTerm general
+XTerm*locale: true
+XTerm*cursorBlink: true
+XTerm*rightScrollBar: false
+XTerm*saveLines: 10000
+
+! XTerm copy-paste
+xterm*VT100.Translations: #override \
+    Shift <KeyPress> Insert: insert-selection(CLIPBOARD) \n\
+    Ctrl Shift <Key>V:    insert-selection(CLIPBOARD) \n\
+    Ctrl Shift <Key>C:    copy-selection(CLIPBOARD) \n\
+    Ctrl <Btn1Up>: exec-formatted("xdg-open '%t'", PRIMARY)
