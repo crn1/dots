@@ -43,11 +43,11 @@ alias m='sudo mount'
 alias um='sudo umount'
 alias rm='sudo rm $@'
 
-#YouTube komande
+#YouTube commands
 alias yt="youtube-dl --add-metadata -ic"
 alias yta="youtube-dl --add-metadata --extract-audio --audio-format mp3"
 
-#git komande
+#git commands
 alias g='sudo git'
 alias gi='sudo git init'
 alias ga='sudo git add'
@@ -82,6 +82,6 @@ cd()
 	ls -h --color=auto
 }
 
-#ostalo
+#misc
 shopt -s autocd
 PS1='[\u@\h \W]\$ '
