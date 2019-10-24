@@ -1,16 +1,17 @@
-sudo ln -srf ./bashrc ~/.bashrc
-sudo ln -srf ./vimrc ~/.vimrc
-sudo ln -srf ./gitconfig ~/.gitconfig
-sudo ln -srf ./xinitrc ~/.xinitrc
-sudo ln -srf ./bash_profile ~/.bash_profile
-sudo ln -srf ./Xresources ~/.Xresources
-sudo ln -srf ./environment /etc/environment
+PWD=`pwd`;
+
+ln -sf "$PWD/bashrc" ~/.bashrc
+ln -sf "$PWD/vimrc" ~/.vimrc
+ln -sf "$PWD/gitconfig" ~/.gitconfig
+ln -sf "$PWD/xinitrc" ~/.xinitrc
+ln -sf "$PWD/bash_profile" ~/.bash_profile
+ln -sf "$PWD/Xresources" ~/.Xresources
 
 #napravi foldere ako ne postoje
-sudo mkdir -p ~/.config
-sudo mkdir -p ~/.config/i3
-sudo mkdir -p ~/.config/i3status
+mkdir -p ~/.config
+mkdir -p ~/.config/i3
+mkdir -p ~/.config/i3status
 
 #i3 syslink
-sudo ln -srf ./config/i3/config ~/.config/i3/config
-sudo ln -srf ./config/i3status/config ~/.config/i3status/config
+ln -sf "$PWD/config/i3/config" ~/.config/i3/config
+ln -sf "$PWD/config/i3status/config" ~/.config/i3status/config
