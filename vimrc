@@ -23,25 +23,9 @@ call plug#begin('~/.vim/plugged')
 	let g:ycm_key_list_select_completion = ['<Tab>']
 	let g:ycm_key_list_previous_completion = ['<S-Tab>']
 
-	Plug 'SirVer/ultisnips'
-	let g:UltiSnipsExpandTrigger="gg"
-	let g:UltiSnipsJumpForwardTrigger="ww"
-	let g:UltiSnipsJumpBackwardTrigger="bb"
-	let g:UltiSnipsListSnippets="<C-l>"
-	let g:UltiSnipsEditSplit="vertical"
-	autocmd FileType js UltiSnipsAddFiletypes js.html
-
 	Plug 'easymotion/vim-easymotion'
 	let g:EasyMotion_keys = 'asdfhjklwb'
 	map f <Plug>(easymotion-prefix)
-
-	Plug 'honza/vim-snippets'
-	" React i HTML
-	autocmd BufRead,BufNewFile *.js :UltiSnipsAddFiletypes html
-
-	Plug 'itchyny/lightline.vim'
-	set laststatus=2
-	set noshowmode
 
 	Plug 'gavinbeatty/dragvisuals.vim'
 	runtime plugin/dragvisuals.vim
@@ -61,16 +45,9 @@ call plug#begin('~/.vim/plugged')
 	let NERDTreeMinimalUI = 1
 	let NERDTreeDirArrows = 1
 
-	Plug 'Xuyuanp/nerdtree-git-plugin'
-
 	Plug 'PotatoesMaster/i3-vim-syntax'
 
 	Plug 'Raimondi/delimitMate'
-
-	Plug 'lilydjwg/colorizer', {'for': ['js', 'html']}
-
-	Plug 'mattn/emmet-vim', {'for': ['js', 'html', 'css', 'php']}
-	let g:user_emmet_leader_key='<C-e>'
 
 call plug#end()
 
