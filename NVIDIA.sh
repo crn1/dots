@@ -1,3 +1,4 @@
+sudo bash -c 'echo "linux_load=\"YES\"" >> /boot/loader.conf'
 sudo kld_load linux64
 echo ""
 echo " ***** If not working for the first time restart your computer ***** "
