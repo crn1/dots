@@ -1,7 +1,7 @@
-sudo pkg install fish python py36-ranger py36-pip wget curl vim git gcc cmake
+sudo pkg install -y fish python py36-ranger py36-pip wget curl vim git gcc cmake
 
 #GUI
-sudo pkg install xorg i3-gaps i3status rxvt-unicode urxvt-perls dmenu arandr transmission-gtk sxiv firefox mplayer evince ubuntu-font gedit
+sudo pkg install -y xorg i3-gaps i3status rxvt-unicode urxvt-perls dmenu arandr transmission-gtk sxiv firefox mplayer evince ubuntu-font gedit
 
 PWD=`pwd`;
 
@@ -42,3 +42,10 @@ sudo rm -f /etc/motd
 sudo chsh -s `which fish`
 echo 'Enter password for fish shell inegration'
 chsh -s `which fish`
+
+#fish syslink
+ln -sf "$PWD/config/fish/config.fish" ~/.config/fish/config.fish
+ln -sf "$PWD/config/fish/fish_variables" ~/.config/fish/fish_variables
+
+sudo ln -sf "$PWD/config/i3/config" /root/.config/fish/config.fish
+sudo ln -sf "$PWD/config/i3status/config" /root/.config/fish/fish_variables
