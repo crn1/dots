@@ -35,17 +35,19 @@ ln -sf "$PWD/config/i3status/config" ~/.config/i3status/config
 sudo ln -sf "$PWD/config/i3/config" /root/.config/i3/config
 sudo ln -sf "$PWD/config/i3status/config" /root/.config/i3status/config
 
-#Delete motd message
-sudo rm -f /etc/motd
-
-#Set the fish shell
-sudo chsh -s `which fish`
-echo 'Enter password for fish shell inegration'
-chsh -s `which fish`
-
 #fish syslink
 ln -sf "$PWD/config/fish/config.fish" ~/.config/fish/config.fish
 ln -sf "$PWD/config/fish/fish_variables" ~/.config/fish/fish_variables
 
-sudo ln -sf "$PWD/config/i3/config" /root/.config/fish/config.fish
-sudo ln -sf "$PWD/config/i3status/config" /root/.config/fish/fish_variables
+sudo ln -sf "$PWD/config/fish/config.fish" ~/.config/fish/config.fish
+sudo ln -sf "$PWD/config/fish/fish_variables" ~/.config/fish/fish_variables
+
+#Delete motd message
+sudo rm -f /etc/motd
+
+#Set and configure fish shell
+sudo chsh -s `which fish`
+echo 'Enter password for fish shell inegration'
+chsh -s `which fish`
+fish -c "set fish_greeting"
+sudo fish -c "set fish_greeting"
