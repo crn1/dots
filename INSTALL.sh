@@ -1,7 +1,7 @@
-sudo pkg install ranger udiskie wget curl vim git gcc cmake
+sudo pkg install fish python py36-ranger py36-pip wget curl vim git gcc cmake
 
 #GUI
-sudo pkg install xorg fish xinit i3-gaps i3status rxvt-unicode urxvt-perls dmenu arandr transmission-gtk sxiv python py36-pip xorg-server firefox mplayer evince ubuntu-font gedit
+sudo pkg install xorg i3-gaps i3status rxvt-unicode urxvt-perls dmenu arandr transmission-gtk sxiv firefox mplayer evince ubuntu-font gedit
 
 PWD=`pwd`;
 
@@ -37,3 +37,8 @@ sudo ln -sf "$PWD/config/i3status/config" ~/.config/i3status/config
 
 #Delete motd message
 sudo rm -f /etc/motd
+
+#Set the fish shell
+sudo chsh -s `which fish`
+echo 'Enter password for fish shell inegration'
+chsh -s `which fish`
