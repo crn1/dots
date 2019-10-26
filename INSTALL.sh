@@ -51,3 +51,7 @@ echo 'Enter password for fish shell inegration'
 chsh -s `which fish`
 fish -c "set fish_greeting"
 sudo fish -c "set fish_greeting"
+
+#disable delay at menu boot
+sudo bash -c 'echo "disable_beastie=\"YES\"" >> /boot/loader.conf'
+sudo bash -c 'echo "autoboot_delay=\"0\"" >> /boot/loader.conf'
