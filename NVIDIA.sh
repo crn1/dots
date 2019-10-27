@@ -1,9 +1,7 @@
 sudo bash -c 'echo "linux_load=\"YES\"" >> /boot/loader.conf'
-sudo kld_load linux64
-echo ""
-echo " ***** If not working for the first time restart your computer ***** "
-echo ""
-sudo pkg install -y linux-c7
+sudo kldload linux64
 sudo pkg install -y nvidia-driver nvidia-xconfig
+sudo bash -c 'echo "nvidia_load=\"YES\"" >> /boot/loader.conf'
 sudo sysrc kld_list+="nvidia_modeset"
+sudo kldload nvidia
 sudo nvidia-xconfig
