@@ -1,7 +1,14 @@
-sudo bash -c 'echo "linux_load=\"YES\"" >> /boot/loader.conf'
+sudo rm -f /etc/X11/xorg.conf /usr/local/etc/X11/xorg.conf
 sudo kldload linux64
 sudo pkg install -y nvidia-driver nvidia-xconfig
-sudo bash -c 'echo "nvidia_load=\"YES\"" >> /boot/loader.conf'
 sudo sysrc kld_list+="nvidia_modeset"
-sudo kldload nvidia
+sudo kldload nvidia-modeset
+sudo mkdir -p /usr/local/etc/X11/xorg.conf
+
+sudo bash -c 'echo "Section \"Device\"" > /usr/local/etc/X11/xorg.conf.d/driver-nvidia.conf'
+sudo bash -c 'echo "\tIdentifier \"NVIDIA Card\"" >> /usr/local/etc/X11/xorg.conf.d/driver-nvidia.conf'
+sudo bash -c 'echo "\tVendorName \"NVIDIA Coorporation\"" >> /usr/local/etc/X11/xorg.conf.d/driver-nvidia.conf'
+sudo bash -c 'echo "\tDriver \"nvidia\"" >> /usr/local/etc/X11/xorg.conf.d/driver-nvidia.conf'
+sudo bash -c 'echo "EndSection" >> /usr/local/etc/X11/xorg.conf.d/driver-nvidia.conf'
+
 sudo nvidia-xconfig
