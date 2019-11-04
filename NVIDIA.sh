@@ -1,14 +1,29 @@
-sudo rm -f /etc/X11/xorg.conf /usr/local/etc/X11/xorg.conf
-sudo kldload linux64
-sudo pkg install -y nvidia-driver nvidia-xconfig
-sudo sysrc kld_list+="nvidia_modeset"
-sudo kldload nvidia-modeset
-sudo mkdir -p /usr/local/etc/X11/xorg.conf
+#!/usr/bin/env bash
 
-sudo bash -c 'echo "Section \"Device\"" > /usr/local/etc/X11/xorg.conf.d/driver-nvidia.conf'
-sudo bash -c 'echo "	Identifier \"NVIDIA Card\"" >> /usr/local/etc/X11/xorg.conf.d/driver-nvidia.conf'
-sudo bash -c 'echo "	VendorName \"NVIDIA Coorporation\"" >> /usr/local/etc/X11/xorg.conf.d/driver-nvidia.conf'
-sudo bash -c 'echo "	Driver \"nvidia\"" >> /usr/local/etc/X11/xorg.conf.d/driver-nvidia.conf'
-sudo bash -c 'echo "EndSection" >> /usr/local/etc/X11/xorg.conf.d/driver-nvidia.conf'
+if [[ ! `id -u` -eq 0 ]]; then
+  echo "Please run this script as root";
+fi;
 
-sudo nvidia-xconfig
+rm -f /etc/X11/xorg.conf /usr/local/etc/X11/xorg.conf
+kldload linux64
+pkg install -y nvidia-driver nvidia-xconfig
+sysrc kld_list+="nvidia-modeset"
+kldload nvidia-modeset
+
+XORG_CONF_DIR="/usr/local/etc/X11/xorg.conf.d"
+XORG_CONF_FILE="$XORG_CONF_DIR/driver-nvidia.conf"
+
+mkdir -p "$XORG_CONF_DIR"
+
+cat > "$XORG_CONF_FILE" << "EOF"
+Section "Device"
+	Identifier "NVIDIA Card"
+	VendorName "NVIDIA Coorporation"
+	Driver "nvidia"
+EndSection
+EOF
+
+nvidia-xconfig
+
+echo "Nvidia"
+
