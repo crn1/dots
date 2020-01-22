@@ -49,6 +49,10 @@ call plug#begin('~/.vim/plugged')
 
 	Plug 'Raimondi/delimitMate'
 
+	Plug 'alvan/vim-closetag'
+	let g:closetag_filetypes = 'html,xhtml,xml,php,js,jsx,ts'
+	let g:closetag_filenames = '*.html,*.xhtml,*.xml,*.php,*.js,*.jsx,*.ts'
+
 call plug#end()
 
 syntax on
