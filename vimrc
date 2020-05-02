@@ -8,7 +8,7 @@
 
 let mapleader = "\<Space>"
 
-call plug#begin('C:/Users/crn1/AppData/Local/nvim/plugged')
+call plug#begin('~/.vim/plugged')
 
 	Plug 'junegunn/vim-plug'
 
