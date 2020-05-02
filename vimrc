@@ -8,20 +8,9 @@
 
 let mapleader = "\<Space>"
 
-"Automatic vim-plug installation
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
-call plug#begin('~/.vim/plugged')
+call plug#begin('C:/Users/crn1/AppData/Local/nvim/plugged')
 
 	Plug 'junegunn/vim-plug'
-
-	Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
-	let g:ycm_key_list_select_completion = ['<Tab>']
-	let g:ycm_key_list_previous_completion = ['<S-Tab>']
 
 	Plug 'easymotion/vim-easymotion'
 	let g:EasyMotion_keys = 'asdfhjklwb'
@@ -35,23 +24,39 @@ call plug#begin('~/.vim/plugged')
 	vmap <expr> L DVB_Drag('right')
 	vmap <expr> D DVB_Duplicate()
 
-	Plug 'scrooloose/nerdtree'
+	Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 	autocmd StdinReadPre * let s:std_in=1
-	autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 	autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 	nnoremap <Leader>n :NERDTreeToggle<Enter>
 	nnoremap <silent> <Leader>f :NERDTreeFind<CR>
 	let NERDTreeAutoDeleteBuffer = 1
 	let NERDTreeMinimalUI = 1
 	let NERDTreeDirArrows = 1
+	let NERDTreeHijackNetrw = 0
 
-	Plug 'PotatoesMaster/i3-vim-syntax'
+	Plug 'mattn/emmet-vim'
+	let g:user_emmet_install_global = 0
+	autocmd FileType html,css,scss,php EmmetInstall
+	imap <expr> ` emmet#expandAbbrIntelligent("\`")
+	let g:user_emmet_complete_tag = 1
+	let g:user_emmet_attr_quotes = 'single'
+	let g:user_emmet_settings = {
+	\	'html': { 'quote_char': "'" },
+	\	'css': { 'quote_char': "'" },
+	\	'scss': { 'quote_char': "'" },
+	\	'js': { 'quote_char': "'" },
+	\	'php': { 'quote_char': "'" }
+	\}
 
 	Plug 'Raimondi/delimitMate'
 
+	Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+	let g:ycm_key_list_select_completion = ['<Tab>']
+	let g:ycm_key_list_previous_completion = ['<S-Tab>']
+
 	Plug 'alvan/vim-closetag'
-	let g:closetag_filetypes = 'html,xhtml,xml,php,js,jsx,ts'
-	let g:closetag_filenames = '*.html,*.xhtml,*.xml,*.php,*.js,*.jsx,*.ts'
+	let g:closetag_filetypes = 'html,,xml,php,js'
+	let g:closetag_filenames = '*.html,*.xml,*.php,*.js,'
 
 call plug#end()
 
@@ -76,6 +81,8 @@ set showmatch
 set splitbelow splitright
 set backspace=indent,eol,start
 set mouse=a
+set guifont=Consolas:h14
+color default
 
 "Backup
 set nobackup
@@ -98,12 +105,12 @@ command WQ wq
 command Wq wq
 command W w
 command Q q
-nnoremap B ^
-nnoremap E $
 
 vmap <Tab> >gv
 vmap <S-Tab> <gv
 map <Leader>a ggVG
+map <Leader>b ^
+map <Leader>e $
 
 nnoremap <Leader>h :wincmd h<CR>
 nnoremap <Leader>l :wincmd l<CR>
@@ -111,14 +118,7 @@ nnoremap <Leader>k :wincmd k<CR>
 nnoremap <Leader>j :wincmd j<CR>
 nnoremap <Leader>p :wincmd p<CR>
 
-nmap 1 gT
-nmap 2 gt
-
 autocmd BufWritePre * %s/\s\+$//e
-
-"OSCON 2013
-highlight ColorColumn ctermbg=20
-call matchadd('ColorColumn', '\%81v', 100)
 
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
