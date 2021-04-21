@@ -1,3 +1,4 @@
+  
 "
 "          (_)
 "     __   ___ _ __ ___  _ __ ___
@@ -34,21 +35,8 @@ call plug#begin('~/.vim/plugged')
 	let NERDTreeDirArrows = 1
 	let NERDTreeHijackNetrw = 0
 
-	Plug 'mattn/emmet-vim'
-	let g:user_emmet_install_global = 0
-	autocmd FileType html,css,scss,php EmmetInstall
-	imap <expr> ` emmet#expandAbbrIntelligent("\`")
-	let g:user_emmet_complete_tag = 1
-	let g:user_emmet_attr_quotes = 'single'
-	let g:user_emmet_settings = {
-	\	'html': { 'quote_char': "'" },
-	\	'css': { 'quote_char': "'" },
-	\	'scss': { 'quote_char': "'" },
-	\	'js': { 'quote_char': "'" },
-	\	'php': { 'quote_char': "'" }
-	\}
-
 	Plug 'Raimondi/delimitMate'
+	au FileType html let b:delimitMate_matchpairs = "(:),[:],{:}"
 
 	Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 	let g:ycm_key_list_select_completion = ['<Tab>']
