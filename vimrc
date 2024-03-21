@@ -111,6 +111,10 @@ autocmd BufWritePre * %s/\s\+$//e
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
+"80th column marker
+"highlight ColorColumn ctermbg=magenta
+"call matchadd('ColorColumn', '\%81v', 100)
+
 "Remove GUI stuff from gVim
 set guioptions -=T
 set guioptions -=m
