@@ -110,3 +110,7 @@ autocmd BufWritePre * %s/\s\+$//e
 
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
+
+"Remove GUI stuff from gVim
+set guioptions -=T
+set guioptions -=m
