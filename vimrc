@@ -114,3 +114,4 @@ set whichwrap+=<,>,h,l
 "Remove GUI stuff from gVim
 set guioptions -=T
 set guioptions -=m
+set guioptions -=L
