@@ -63,6 +63,7 @@ set tabstop=2
 set scrolloff=5
 set autoindent
 set encoding=utf-8
+set belloff=all
 set number
 set cursorline
 set showmatch
