@@ -46,6 +46,10 @@ call plug#begin('~/.vim/plugged')
 	let g:closetag_filetypes = 'html,,xml,php,js'
 	let g:closetag_filenames = '*.html,*.xml,*.php,*.js,'
 
+	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+	Plug 'junegunn/fzf.vim'
+	nnoremap <C-p> :Files<Cr>
+
 call plug#end()
 
 syntax on
