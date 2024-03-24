@@ -38,9 +38,9 @@ call plug#begin('~/.vim/plugged')
 	Plug 'Raimondi/delimitMate'
 	au FileType html let b:delimitMate_matchpairs = "(:),[:],{:}"
 
-	Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
-	let g:ycm_key_list_select_completion = ['<Tab>']
-	let g:ycm_key_list_previous_completion = ['<S-Tab>']
+	"Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+	"let g:ycm_key_list_select_completion = ['<Tab>']
+	"let g:ycm_key_list_previous_completion = ['<S-Tab>']
 
 	Plug 'alvan/vim-closetag'
 	let g:closetag_filetypes = 'html,,xml,php,js'
@@ -115,6 +115,9 @@ autocmd BufWritePre * %s/\s\+$//e
 
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
+
+#Set the theme of Vim
+colorscheme retrobox
 
 "80th column marker
 "highlight ColorColumn ctermbg=magenta
