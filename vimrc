@@ -50,6 +50,9 @@ call plug#begin('~/.vim/plugged')
 	Plug 'junegunn/fzf.vim'
 	nnoremap <C-p> :Files<Cr>
 
+	Plug 'vimwiki/vimwiki'
+	let g:vimwiki_list = [{'path': 'C:/Users/crn1/Dropbox/Wiki', 'ext': 'md'}]
+
 call plug#end()
 
 syntax on
