@@ -54,10 +54,12 @@ call plug#begin('~/.vim/plugged')
 	let g:vimwiki_list = [{'path': 'C:/Users/crn1/Dropbox/Wiki', 'ext': 'md'}]
 
 	"function! VimwikiLinkHandler(link)
-        "	execute 'silent ! start ' . shellescape(a:link, 1)
-        "	" or probably
-        "	" execute 'silent ! start /B iexplore.exe ' . shellescape(a:link, 1)
-        "	return 1
+	"	if a:link =~ "http" || a:link =~ "local:" || a:link =~ "file:"
+	"		execute 'silent ! start ' . shellescape(a:link, 1)
+	"		" or probably
+	"		" execute 'silent ! start /B iexplore.exe ' . shellescape(a:link, 1)
+	"		return 1
+	"	endif
 	"endfunction
 
 
