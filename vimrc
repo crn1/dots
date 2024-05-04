@@ -1,4 +1,4 @@
-  
+
 "
 "          (_)
 "     __   ___ _ __ ___  _ __ ___
@@ -130,14 +130,9 @@ autocmd BufWritePre * %s/\s\+$//e
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
-#Set the theme of Vim
-colorscheme retrobox
+"Set the theme of Vim
+"colorscheme retrobox
 
 "80th column marker
-"highlight ColorColumn ctermbg=magenta
-"call matchadd('ColorColumn', '\%81v', 100)
-
-"Remove GUI stuff from gVim
-set guioptions -=T
-set guioptions -=m
-set guioptions -=L
+highlight ColorColumn ctermbg=magenta
+call matchadd('ColorColumn', '\%81v', 100)
