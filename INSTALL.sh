@@ -1,10 +1,18 @@
-sudo pkg install -y fish python py36-ranger py36-pip wget curl vim git gcc cmake
+# ARCH -- pacman
+sudo pacman -Sy install fish python ranger pip wget curl vim git gcc cmake
 
-#GUI
-sudo pkg install -y xorg i3-gaps i3status rxvt-unicode urxvt-perls dmenu arandr transmission-gtk sxiv firefox mplayer evince ubuntu-font gedit
+#ARCH -- pacman -- GUI
+sudo pacman -Sy install xorg xorg-server xorg-apps xorg-xinit i3-gaps i3status i3blocks rxvt-unicode urxvt-perls dmenu arandr transmission-gtk sxiv chromium vlc evince ubuntu-font gedit extra/setxkbmap keepassxc libreoffice nautilus spotify-launcher pamixer #python-pywal feh
+
+#enable lightdm
+#sudo systemctl enable lightdm
+
+#remap caplock to esc
+#sudo setxkbmap -option caps:escape
 
 PWD=`pwd`;
 
+# Make symbolic links
 ln -sf "$PWD/vimrc" ~/.vimrc
 ln -sf "$PWD/gitconfig" ~/.gitconfig
 ln -sf "$PWD/xinitrc" ~/.xinitrc
@@ -35,6 +43,10 @@ ln -sf "$PWD/config/i3status/config" ~/.config/i3status/config
 sudo ln -sf "$PWD/config/i3/config" /root/.config/i3/config
 sudo ln -sf "$PWD/config/i3status/config" /root/.config/i3status/config
 
+#redshift syslink
+ln -sf "$PWD/config/redshift.conf" ~/.config/redshift.conf
+sudo ln -sf "$PWD/config/redshift.conf" /root/.config/redshift.conf
+
 #fish syslink
 ln -sf "$PWD/config/fish/config.fish" ~/.config/fish/config.fish
 ln -sf "$PWD/config/fish/fish_variables" ~/.config/fish/fish_variables
@@ -52,6 +64,13 @@ chsh -s `which fish`
 fish -c "set fish_greeting"
 sudo fish -c "set fish_greeting"
 
+#Setup vim-plug
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+sudo curl -fLo /root/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
 #disable delay at menu boot
-sudo bash -c 'echo "disable_beastie=\"YES\"" >> /boot/loader.conf'
-sudo bash -c 'echo "autoboot_delay=\"0\"" >> /boot/loader.conf'
+#sudo bash -c 'echo "disable_beastie=\"YES\"" >> /boot/loader.conf'
+sudo bash -c 'echo "timeout 0" >> /boot/loader/loader.conf'
+
+#download Dropbox THIS NEEDS TO BE LAST!
+cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -

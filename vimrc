@@ -38,9 +38,9 @@ call plug#begin('~/.vim/plugged')
 	Plug 'Raimondi/delimitMate'
 	au FileType html let b:delimitMate_matchpairs = "(:),[:],{:}"
 
-	"Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
-	"let g:ycm_key_list_select_completion = ['<Tab>']
-	"let g:ycm_key_list_previous_completion = ['<S-Tab>']
+	Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+	let g:ycm_key_list_select_completion = ['<Tab>']
+	let g:ycm_key_list_previous_completion = ['<S-Tab>']
 
 	Plug 'alvan/vim-closetag'
 	let g:closetag_filetypes = 'html,,xml,php,js'
@@ -51,7 +51,7 @@ call plug#begin('~/.vim/plugged')
 	nnoremap <C-p> :Files<Cr>
 
 	Plug 'vimwiki/vimwiki'
-	let g:vimwiki_list = [{'path': 'C:/Users/crn1/Dropbox/Wiki', 'ext': 'md'}]
+	let g:vimwiki_list = [{'path': '~/Dropbox/Aparati', 'ext': 'md'}]
 
 	"function! VimwikiLinkHandler(link)
 	"	if a:link =~ "http" || a:link =~ "local:" || a:link =~ "file:"

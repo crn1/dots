@@ -3,5 +3,7 @@
 *background: #303030
 *scrollBar: false
 *font: xft:Ubuntu Mono:style=Regular:size=14:antialias=true
-
 *color4: #FF4500
+
+! Fix Urxvt prompt
+URxvt*geometry: 80x240+0+0
