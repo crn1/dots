@@ -75,5 +75,3 @@ sudo fish -c "set fish_greeting"
 
 #download Dropbox THIS NEEDS TO BE LAST!
 cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
-
-echo "DON'T FORGET TO ADD SSH KEYS FOR GITHUB!"
