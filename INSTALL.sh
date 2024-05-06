@@ -2,7 +2,7 @@
 sudo pacman -Sy install fish python ranger pip wget curl vim git gcc cmake
 
 #ARCH -- pacman -- GUI
-sudo pacman -Sy install xorg xorg-server xorg-apps xorg-xinit i3-gaps i3status i3blocks rxvt-unicode urxvt-perls dmenu arandr transmission-gtk sxiv chromium vlc evince ubuntu-font gedit extra/setxkbmap keepassxc libreoffice nautilus spotify-launcher pamixer #python-pywal feh
+sudo pacman -Sy install xorg xorg-server xorg-apps xorg-xinit i3-gaps i3status i3blocks rxvt-unicode urxvt-perls dmenu arandr transmission-gtk sxiv chromium vlc evince ubuntu-font gedit extra/setxkbmap keepassxc libreoffice nautilus spotify-launcher pamixer openssh #python-pywal feh
 
 #enable lightdm
 #sudo systemctl enable lightdm
@@ -57,12 +57,6 @@ sudo ln -sf "$PWD/config/fish/fish_variables" ~/.config/fish/fish_variables
 #Delete motd message
 sudo rm -f /etc/motd
 
-#Set and configure fish shell
-sudo chsh -s `which fish`
-echo 'Enter password for fish shell inegration'
-chsh -s `which fish`
-fish -c "set fish_greeting"
-sudo fish -c "set fish_greeting"
 
 #Setup vim-plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -72,5 +66,14 @@ sudo curl -fLo /root/.vim/autoload/plug.vim --create-dirs https://raw.githubuser
 #sudo bash -c 'echo "disable_beastie=\"YES\"" >> /boot/loader.conf'
 sudo bash -c 'echo "timeout 0" >> /boot/loader/loader.conf'
 
+#Set and configure fish shell
+sudo chsh -s `which fish`
+echo 'Enter password for fish shell inegration'
+chsh -s `which fish`
+fish -c "set fish_greeting"
+sudo fish -c "set fish_greeting"
+
 #download Dropbox THIS NEEDS TO BE LAST!
 cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
+
+echo "DON'T FORGET TO ADD SSH KEYS FOR GITHUB!"
