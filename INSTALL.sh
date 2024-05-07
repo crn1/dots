@@ -49,18 +49,19 @@ sudo pacman -S --noconfirm extra/ttf-ubuntu-font-family
 
 #Download and install yay
 git clone https://aur.archlinux.org/yay-git.git ~/yay-git
-makepkg -si --noconfirm ~/yay-git
+cd ~/yay-git && makepkg -si --noconfirm
+cd ~/dots
 rm -rf ~/yay-git
 
 #Install Google Chrome
 yay -Sy --noconfirm google-chrome
 
 #Install beeper
-wget -O /usr/local/bin/beeper https://download.beeper.com/linux/appImage/x64
+sudo wget -O /usr/local/bin/beeper https://download.beeper.com/linux/appImage/x64
 sudo chmod +x /usr/local/bin/beeper
 
 #Install espanso
-wget -O /usr/local/bin/espanso 'https://github.com/federico-terzi/espanso/releases/download/v2.2.1/Espanso-X11.AppImage'
+sudo wget -O /usr/local/bin/espanso 'https://github.com/federico-terzi/espanso/releases/download/v2.2.1/Espanso-X11.AppImage'
 sudo chmod +x /usr/local/bin/espanso
 
 #Download Dropbox
@@ -73,6 +74,7 @@ rm ~/dropbox-installer
 #remap caplock to esc
 #sudo setxkbmap -option caps:escape
 
+cd ~/dots
 PWD=`pwd`;
 
 # Make symbolic links
