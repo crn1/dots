@@ -1,59 +1,59 @@
 # ARCH -- pacman
 sudo pacman -Syy
-sudo pacman -S fish
-sudo pacman -S python
-sudo pacman -S ranger
-sudo pacman -S python-pip
-sudo pacman -S wget
-sudo pacman -S curl
-sudo pacman -S vim
-sudo pacman -S git
-sudo pacman -S gcc
-sudo pacman -S cmake
+sudo pacman -S --noconfirm fish
+sudo pacman -S --noconfirm python
+sudo pacman -S --noconfirm ranger
+sudo pacman -S --noconfirm python-pip
+sudo pacman -S --noconfirm wget
+sudo pacman -S --noconfirm curl
+sudo pacman -S --noconfirm vim
+sudo pacman -S --noconfirm git
+sudo pacman -S --noconfirm gcc
+sudo pacman -S --noconfirm cmake
 
 #ARCH -- pacman -- GUI -- Xorg
-sudo pacman -S xorg
-sudo pacman -S xorg-server
-sudo pacman -S xorg-apps
-sudo pacman -S xorg-xinit
-sudo pacman -S extra/xorg-setxkbmap
+sudo pacman -S --noconfirm xorg
+sudo pacman -S --noconfirm xorg-server
+sudo pacman -S --noconfirm xorg-apps
+sudo pacman -S --noconfirm xorg-xinit
+sudo pacman -S --noconfirm extra/xorg-setxkbmap
 
 #ARCH -- pacman -- GUI
-sudo pacman -S i3-gaps
-sudo pacman -S i3status
-sudo pacman -S i3blocks
-sudo pacman -S rxvt-unicode
-sudo pacman -S urxvt-perls
-sudo pacman -S dmenu
-sudo pacman -S arandr
-sudo pacman -S transmission-gtk
-sudo pacman -S sxiv
-sudo pacman -S vlc
-sudo pacman -S evince
-sudo pacman -S gedit
-sudo pacman -S keepassxc
-sudo pacman -S libreoffice
-sudo pacman -S pamixer
-sudo pacman -S openssh
-sudo pacman -S go
-sudo pacman -S unzip
-sudo pacman -S docker
-sudo pacman -S nautilus
+sudo pacman -S --noconfirm i3-gaps
+sudo pacman -S --noconfirm i3status
+sudo pacman -S --noconfirm i3blocks
+sudo pacman -S --noconfirm rxvt-unicode
+sudo pacman -S --noconfirm urxvt-perls
+sudo pacman -S --noconfirm dmenu
+sudo pacman -S --noconfirm arandr
+sudo pacman -S --noconfirm transmission-gtk
+sudo pacman -S --noconfirm sxiv
+sudo pacman -S --noconfirm vlc
+sudo pacman -S --noconfirm evince
+sudo pacman -S --noconfirm gedit
+sudo pacman -S --noconfirm keepassxc
+sudo pacman -S --noconfirm libreoffice
+sudo pacman -S --noconfirm pamixer
+sudo pacman -S --noconfirm openssh
+sudo pacman -S --noconfirm go
+sudo pacman -S --noconfirm unzip
+sudo pacman -S --noconfirm docker
+sudo pacman -S --noconfirm nautilus
 
 #ARCH -- pacman -- additional
-sudo pacman -S flameshot
-sudo pacman -S spotify-launcher
-sudo pacman -S extra/ttf-ubuntu-font-family
+sudo pacman -S --noconfirm flameshot
+sudo pacman -S --noconfirm spotify-launcher
+sudo pacman -S --noconfirm extra/ttf-ubuntu-font-family
 #sudo pacman -S feh
 #sudo pacman -S python-pywal
 
 #Download and install yay
 git clone https://aur.archlinux.org/yay-git.git ~/yay-git
-cd ~/yay-git && makepkg -si
+cd ~/yay-git && makepkg -si --noconfirm
 rm -rf ~/yay-git
 
 #Install Google Chrome
-yay -Sy google-chrome
+yay -Sy --noconfirm google-chrome
 
 #Install beeper
 wget -O /usr/local/bin/beeper https://download.beeper.com/linux/appImage/x64
