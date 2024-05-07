@@ -2,7 +2,8 @@
 sudo pacman -Syy install fish python ranger pip wget curl vim git gcc cmake
 
 #ARCH -- pacman -- GUI
-sudo pacman -Sy install xorg xorg-server xorg-apps xorg-xinit i3-gaps i3status i3blocks rxvt-unicode urxvt-perls dmenu arandr transmission-gtk sxiv vlc evince ubuntu-font gedit extra/setxkbmap keepassxc libreoffice nautilus spotify-launcher pamixer openssh go unzip flameshot python-pip docker #python-pywal feh
+sudo pacman -Sy install xorg xorg-server xorg-apps xorg-xinit i3-gaps i3status i3blocks rxvt-unicode urxvt-perls dmenu arandr transmission-gtk sxiv vlc evince ubuntu-font gedit extra/setxkbmap keepassxc libreoffice nautilus spotify-launcher pamixer openssh go unzip flameshot python-pip docker
+# + python-pywal feh
 
 #Download and install yay
 git clone https://aur.archlinux.org/yay-git.git ~/yay-git
