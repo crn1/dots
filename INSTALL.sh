@@ -49,7 +49,7 @@ sudo pacman -S --noconfirm extra/ttf-ubuntu-font-family
 
 #Download and install yay
 git clone https://aur.archlinux.org/yay-git.git ~/yay-git
-cd ~/yay-git && makepkg -si --noconfirm
+makepkg -si --noconfirm ~/yay-git
 rm -rf ~/yay-git
 
 #Install Google Chrome
