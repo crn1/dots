@@ -115,8 +115,8 @@ sudo ln -sf "$PWD/config/redshift.conf" /root/.config/redshift.conf
 #fish syslink
 ln -sf "$PWD/config/fish/config.fish" ~/.config/fish/config.fish
 ln -sf "$PWD/config/fish/fish_variables" ~/.config/fish/fish_variables
-sudo ln -sf "$PWD/config/fish/config.fish" ~/.config/fish/config.fish
-sudo ln -sf "$PWD/config/fish/fish_variables" ~/.config/fish/fish_variables
+sudo ln -sf "$PWD/config/fish/config.fish" /root/.config/fish/config.fish
+sudo ln -sf "$PWD/config/fish/fish_variables" /root/.config/fish/fish_variables
 
 #Delete motd message
 sudo rm -f /etc/motd
