@@ -64,7 +64,7 @@ sudo wget -O /usr/local/bin/espanso 'https://github.com/federico-terzi/espanso/r
 sudo chmod +x /usr/local/bin/espanso
 
 #Download Dropbox
-wget -O ~/dropbox-installer "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf ~/dropbox-installer
+wget -O ~/dropbox-installer "https://www.dropbox.com/download?plat=lnx.x86_64" && tar xzf ~/dropbox-installer
 rm ~/dropbox-installer
 
 #enable lightdm
