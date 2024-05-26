@@ -11,8 +11,11 @@ smart_gaps on
 # run programs keyboard shortcuts
 bindsym $mod+g exec google-chrome-stable
 bindsym $mod+n exec nautilus
-bindsym $mod+s exec spotify-launcher
+bindsym $mod+m exec spotify-launcher
+bindsym $mod+s exec flameshot
 bindsym $mod+p exec keepassxc
+bindsym $mod+t exec galculator
+bindsym $mod+b exec beeper
 
 # Audio control
 # Pulse Audio controls

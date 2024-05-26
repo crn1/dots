@@ -1,4 +1,3 @@
-
 "
 "          (_)
 "     __   ___ _ __ ___  _ __ ___
@@ -29,7 +28,7 @@ call plug#begin('~/.vim/plugged')
 	autocmd StdinReadPre * let s:std_in=1
 	autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 	nnoremap <Leader>n :NERDTreeToggle<Enter>
-	nnoremap <silent> <Leader>f :NERDTreeFind<CR>
+	nnoremap <silent> <Leader>f :NERDTreeToggle<CR>
 	let NERDTreeAutoDeleteBuffer = 1
 	let NERDTreeMinimalUI = 1
 	let NERDTreeDirArrows = 1
@@ -44,24 +43,24 @@ call plug#begin('~/.vim/plugged')
 
 	Plug 'alvan/vim-closetag'
 	let g:closetag_filetypes = 'html,,xml,php,js'
-	let g:closetag_filenames = '*.html,*.xml,*.php,*.js,'
+	let g:closetag_filenames = '*.html,*.xml,*.php,*.js,*.jsx,*.ts'
 
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
 	nnoremap <C-p> :Files<Cr>
 
 	Plug 'vimwiki/vimwiki'
-	let g:vimwiki_list = [{'path': '~/Dropbox/Aparati', 'ext': 'md'}]
+	let g:vimwiki_list = [{'path': '~/Dropbox/Wiki', 'ext': 'md'}]
+	let g:vimwiki_folding = 'custom'
 
-	"function! VimwikiLinkHandler(link)
-	"	if a:link =~ "http" || a:link =~ "local:" || a:link =~ "file:"
-	"		execute 'silent ! start ' . shellescape(a:link, 1)
-	"		" or probably
-	"		" execute 'silent ! start /B iexplore.exe ' . shellescape(a:link, 1)
-	"		return 1
-	"	endif
-	"endfunction
-
+	function! VimwikiLinkHandler(link)
+		if a:link =~ "file:" && a:link =~ "\.xlsx$"
+			echo shellescape(a:link, 1)
+			execute 'silent ! xdg-open ' . shellescape(a:link, 1)
+			" execute 'silent ! start /b iexplore.exe ' . shellescape(a:link, 1)
+			return 1
+		endif
+	endfunction
 
 call plug#end()
 
@@ -91,6 +90,11 @@ set mouse=a
 set guifont=Consolas:h14
 color default
 
+"Folding
+hi Folded ctermbg=none ctermfg=grey
+"set foldmethod=indent
+autocmd FileType markdown setlocal foldmethod=indent
+
 "Backup
 set nobackup
 set nowritebackup
@@ -100,6 +104,8 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 "Session
 nnoremap <F2> :mksession! ./.vim_session<CR>
 nnoremap <F3> :source ./.vim_session<CR>
+"autocmd VimEnter * silent! source ~/.vim_session
+"autocmd VimLeave * :mksession! ~/.vim_session
 
 "No more swap files
 set nobackup

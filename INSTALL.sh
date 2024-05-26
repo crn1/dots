@@ -39,6 +39,7 @@ sudo pacman -S --noconfirm go
 sudo pacman -S --noconfirm unzip
 sudo pacman -S --noconfirm docker
 sudo pacman -S --noconfirm nautilus
+sudo pacman -S --noconfirm galculator
 
 #ARCH -- pacman -- additional
 sudo pacman -S --noconfirm flameshot
@@ -46,6 +47,10 @@ sudo pacman -S --noconfirm spotify-launcher
 sudo pacman -S --noconfirm extra/ttf-ubuntu-font-family
 #sudo pacman -S feh
 #sudo pacman -S python-pywal
+
+#ARCH --pacman -smartreader
+#sudo pacman -S --noconfirm opensc
+#sudo pacman -S --noconfirm pcsclite
 
 #Download and install yay
 git clone https://aur.archlinux.org/yay-git.git ~/yay-git
