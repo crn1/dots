@@ -57,8 +57,9 @@ git clone https://aur.archlinux.org/yay-git.git ~/yay-git
 cd ~/yay-git && makepkg -si --noconfirm
 rm -rf ~/yay-git
 
-#Install Google Chrome
+#ARCH -- yay -- additional
 yay -Sy --noconfirm google-chrome
+yay -Sy --noconfirm obsidian
 
 #Install beeper
 sudo wget -O /usr/local/bin/beeper https://download.beeper.com/linux/appImage/x64

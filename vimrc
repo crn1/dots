@@ -42,8 +42,9 @@ call plug#begin('~/.vim/plugged')
 	let g:ycm_key_list_previous_completion = ['<S-Tab>']
 
 	Plug 'alvan/vim-closetag'
-	let g:closetag_filetypes = 'html,,xml,php,js'
+	let g:closetag_filetypes = 'html,xml,php,js,jsx,ts'
 	let g:closetag_filenames = '*.html,*.xml,*.php,*.js,*.jsx,*.ts'
+	let g:closetag_xhtml_filetypes = 'xhtml,javascript.jsx,jsx'
 
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'

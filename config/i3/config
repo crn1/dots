@@ -16,6 +16,7 @@ bindsym $mod+s exec flameshot
 bindsym $mod+p exec keepassxc
 bindsym $mod+t exec galculator
 bindsym $mod+b exec beeper
+bindsym $mod+o exec obsidian
 
 # Audio control
 # Pulse Audio controls
