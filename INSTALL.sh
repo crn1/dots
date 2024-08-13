@@ -10,6 +10,7 @@ sudo pacman -S --noconfirm vim
 sudo pacman -S --noconfirm git
 sudo pacman -S --noconfirm gcc
 sudo pacman -S --noconfirm cmake
+sudo pacman -S --noconfirm pacman-contrib
 
 #ARCH -- pacman -- GUI -- Xorg
 sudo pacman -S --noconfirm xorg
@@ -40,6 +41,7 @@ sudo pacman -S --noconfirm unzip
 sudo pacman -S --noconfirm docker
 sudo pacman -S --noconfirm nautilus
 sudo pacman -S --noconfirm galculator
+sudo pacman -S --noconfirm gparted
 
 #ARCH -- pacman -- additional
 sudo pacman -S --noconfirm flameshot
