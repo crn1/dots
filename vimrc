@@ -50,9 +50,12 @@ call plug#begin('~/.vim/plugged')
 	Plug 'junegunn/fzf.vim'
 	nnoremap <C-p> :Files<Cr>
 
-	Plug 'vimwiki/vimwiki'
-	let g:vimwiki_list = [{'path': '~/Dropbox/Wiki', 'ext': 'md'}]
-	let g:vimwiki_folding = 'custom'
+	"Plug 'vimwiki/vimwiki'
+	"let g:vimwiki_list = [{'path': '~/Dropbox/Wiki', 'ext': 'md'}]
+	"let g:vimwiki_folding = 'custom'
+
+	Plug 'vim-autoformat/vim-autoformat'
+	noremap <C-f> :Autoformat<CR>
 
 	function! VimwikiLinkHandler(link)
 		if a:link =~ "file:" && a:link =~ "\.xlsx$"

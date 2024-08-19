@@ -10,6 +10,7 @@ sudo pacman -S --noconfirm vim
 sudo pacman -S --noconfirm git
 sudo pacman -S --noconfirm gcc
 sudo pacman -S --noconfirm cmake
+sudo pacman -S --noconfirm htop
 sudo pacman -S --noconfirm pacman-contrib
 
 #ARCH -- pacman -- GUI -- Xorg
