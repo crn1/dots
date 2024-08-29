@@ -143,3 +143,5 @@ echo 'Enter password for fish shell inegration'
 chsh -s `which fish`
 fish -c "set fish_greeting"
 sudo fish -c "set fish_greeting"
+
+echo 'Visit https://wiki.archlinux.org/title/Getty#Prompt_only_the_password_for_a_default_user_in_virtual_console_login for autologin'
