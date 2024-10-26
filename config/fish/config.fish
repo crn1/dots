@@ -1,3 +1,6 @@
+# General configuration
+set fish_greeting
+
 # Terminal Abbreviations
 abbr --add s sudo
 abbr --add c clear

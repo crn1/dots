@@ -6,7 +6,7 @@ sudo pacman -S --noconfirm ranger
 sudo pacman -S --noconfirm python-pip
 sudo pacman -S --noconfirm wget
 sudo pacman -S --noconfirm curl
-sudo pacman -S --noconfirm vim
+sudo pacman -S --noconfirm gvim
 sudo pacman -S --noconfirm git
 sudo pacman -S --noconfirm gcc
 sudo pacman -S --noconfirm cmake
@@ -67,10 +67,6 @@ yay -Sy --noconfirm obsidian
 #Install beeper
 sudo wget -O /usr/local/bin/beeper https://download.beeper.com/linux/appImage/x64
 sudo chmod +x /usr/local/bin/beeper
-
-#Install espanso
-sudo wget -O /usr/local/bin/espanso 'https://github.com/federico-terzi/espanso/releases/download/v2.2.1/Espanso-X11.AppImage'
-sudo chmod +x /usr/local/bin/espanso
 
 #Download Dropbox
 wget -O ~/dropbox-installer "https://www.dropbox.com/download?plat=lnx.x86_64" && tar xzf ~/dropbox-installer
@@ -141,7 +137,3 @@ sudo bash -c 'echo "timeout 0" >> /boot/loader/loader.conf'
 sudo chsh -s `which fish`
 echo 'Enter password for fish shell inegration'
 chsh -s `which fish`
-fish -c "set fish_greeting"
-sudo fish -c "set fish_greeting"
-
-echo 'Visit https://wiki.archlinux.org/title/Getty#Prompt_only_the_password_for_a_default_user_in_virtual_console_login for autologin'

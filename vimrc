@@ -146,3 +146,9 @@ set whichwrap+=<,>,h,l
 "80th column marker
 highlight ColorColumn ctermbg=magenta
 call matchadd('ColorColumn', '\%81v', 100)
+
+"Ctrl+C copying and pasting in gvim
+vmap <C-c> "+yi
+vmap <C-x> "+c
+vmap <C-v> c<ESC>"+p
+imap <C-v> <C-r><C-o>+
