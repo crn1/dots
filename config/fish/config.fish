@@ -27,7 +27,7 @@ abbr --add gc git clone
 abbr --add gl git log
 abbr --add gs git status
 abbr --add gm git commit
-abbr --add gmm git commit -m \'
+abbr --add gmm git commit -m
 
 # Espanso Abbreviation
 abbr --add eu "cd ~/dots/config/espanso/match && git pull"
