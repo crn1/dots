@@ -5,6 +5,7 @@ set fish_greeting
 abbr --add s sudo
 abbr --add c clear
 abbr --add x exit
+abbr --add q exit
 abbr --add .. cd ..
 abbr --add ... cd ...
 abbr --add .... cd ....
@@ -21,9 +22,12 @@ abbr --add rs sudo shutdown -r now
 
 # Git Abbreviations
 abbr --add ga git add
+abbr --add ga. git add .
 abbr --add gc git clone
 abbr --add gl git log
 abbr --add gs git status
+abbr --add gm git commit
+abbr --add gmm git commit -m \'
 
 # Espanso Abbreviation
 abbr --add eu "cd ~/dots/config/espanso/match && git pull"
