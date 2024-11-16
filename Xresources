@@ -1,6 +1,10 @@
 ! General
 *foreground: #FFFFFF
 *background: #303030
+
+# Set the folder color to more visible one
+*color12: #729FCF
+
 *scrollBar: false
 *font: xft:Ubuntu Mono:style=Regular:size=14:antialias=true
 *color4: #FF4500

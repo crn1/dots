@@ -14,6 +14,7 @@ abbr --add ..... cd .....
 # Program Execution Abbreviations
 abbr --add v vim
 abbr --add r ranger
+abbr --add py python
 
 # Machine Control Abbreviations
 abbr --add of sudo poweroff

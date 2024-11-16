@@ -1,4 +1,4 @@
-# ARCH -- pacman
+#pacman -- General
 sudo pacman -Syy
 sudo pacman -S --noconfirm fish
 sudo pacman -S --noconfirm python
@@ -12,55 +12,59 @@ sudo pacman -S --noconfirm gcc
 sudo pacman -S --noconfirm cmake
 sudo pacman -S --noconfirm htop
 sudo pacman -S --noconfirm pacman-contrib
+sudo pacman -S --noconfirm openssh
+sudo pacman -S --noconfirm unzip
 
-#ARCH -- pacman -- GUI -- Xorg
+#pacman -- GUI -- Xorg
 sudo pacman -S --noconfirm xorg
 sudo pacman -S --noconfirm xorg-server
 sudo pacman -S --noconfirm xorg-apps
 sudo pacman -S --noconfirm xorg-xinit
 sudo pacman -S --noconfirm extra/xorg-setxkbmap
 
-#ARCH -- pacman -- GUI
+#pacman -- Desktop
 sudo pacman -S --noconfirm i3-gaps
 sudo pacman -S --noconfirm i3status
 sudo pacman -S --noconfirm i3blocks
+sudo pacman -S --noconfirm nautilus
 sudo pacman -S --noconfirm rxvt-unicode
 sudo pacman -S --noconfirm urxvt-perls
 sudo pacman -S --noconfirm dmenu
-sudo pacman -S --noconfirm arandr
-sudo pacman -S --noconfirm transmission-gtk
+sudo pacman -S --noconfirm extra/ttf-ubuntu-font-family
+
+#pacman -- Applications
 sudo pacman -S --noconfirm sxiv
-sudo pacman -S --noconfirm vlc
-sudo pacman -S --noconfirm evince
 sudo pacman -S --noconfirm gedit
 sudo pacman -S --noconfirm keepassxc
-sudo pacman -S --noconfirm libreoffice
-sudo pacman -S --noconfirm pamixer
-sudo pacman -S --noconfirm openssh
 sudo pacman -S --noconfirm go
-sudo pacman -S --noconfirm unzip
 sudo pacman -S --noconfirm docker
-sudo pacman -S --noconfirm nautilus
-sudo pacman -S --noconfirm galculator
 sudo pacman -S --noconfirm gparted
+sudo pacman -S --noconfirm mat2
+sudo pacman -S --noconfirm perl-image-exiftool
 
-#ARCH -- pacman -- additional
+#pacman -- Applications -- additional
+sudo pacman -S --noconfirm arandr
+sudo pacman -S --noconfirm evince
+sudo pacman -S --noconfirm galculator
+sudo pacman -S --noconfirm pamixer
+sudo pacman -S --noconfirm vlc
+sudo pacman -S --noconfirm libreoffice
+sudo pacman -S --noconfirm transmission-gtk
 sudo pacman -S --noconfirm flameshot
 sudo pacman -S --noconfirm spotify-launcher
-sudo pacman -S --noconfirm extra/ttf-ubuntu-font-family
-#sudo pacman -S feh
-#sudo pacman -S python-pywal
+#sudo pacman -S --noconfirm feh
+#sudo pacman -S --noconfirm python-pywal
 
-#ARCH --pacman -smartreader
+#ARCH -- pacman -- Smartreader
 #sudo pacman -S --noconfirm opensc
 #sudo pacman -S --noconfirm pcsclite
 
-#Download and install yay
+#yay -- install
 git clone https://aur.archlinux.org/yay-git.git ~/yay-git
 cd ~/yay-git && makepkg -si --noconfirm
 rm -rf ~/yay-git
 
-#ARCH -- yay -- additional
+#yay -- applications
 yay -Sy --noconfirm google-chrome
 yay -Sy --noconfirm obsidian
 
@@ -71,9 +75,6 @@ sudo chmod +x /usr/local/bin/beeper
 #Download Dropbox
 wget -O ~/dropbox-installer "https://www.dropbox.com/download?plat=lnx.x86_64" && tar xzf ~/dropbox-installer
 rm ~/dropbox-installer
-
-#enable lightdm
-#sudo systemctl enable lightdm
 
 #remap caplock to esc
 #sudo setxkbmap -option caps:escape
