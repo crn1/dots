@@ -33,6 +33,7 @@ sudo pacman -S --noconfirm dmenu
 sudo pacman -S --noconfirm extra/ttf-ubuntu-font-family
 
 #pacman -- Applications
+sudo pacman -S --noconfirm torbrowser-launcher
 sudo pacman -S --noconfirm sxiv
 sudo pacman -S --noconfirm gedit
 sudo pacman -S --noconfirm keepassxc
@@ -51,7 +52,7 @@ sudo pacman -S --noconfirm vlc
 sudo pacman -S --noconfirm libreoffice
 sudo pacman -S --noconfirm transmission-gtk
 sudo pacman -S --noconfirm flameshot
-sudo pacman -S --noconfirm spotify-launcher
+#sudo pacman -S --noconfirm spotify-launcher
 #sudo pacman -S --noconfirm feh
 #sudo pacman -S --noconfirm python-pywal
 
@@ -65,16 +66,16 @@ cd ~/yay-git && makepkg -si --noconfirm
 rm -rf ~/yay-git
 
 #yay -- applications
-yay -Sy --noconfirm google-chrome
-yay -Sy --noconfirm obsidian
+#yay -Sy --noconfirm google-chrome
+#yay -Sy --noconfirm obsidian
 
 #Install beeper
-sudo wget -O /usr/local/bin/beeper https://download.beeper.com/linux/appImage/x64
-sudo chmod +x /usr/local/bin/beeper
+#sudo wget -O /usr/local/bin/beeper https://download.beeper.com/linux/appImage/x64
+#sudo chmod +x /usr/local/bin/beeper
 
 #Download Dropbox
-wget -O ~/dropbox-installer "https://www.dropbox.com/download?plat=lnx.x86_64" && tar xzf ~/dropbox-installer
-rm ~/dropbox-installer
+#wget -O ~/dropbox-installer "https://www.dropbox.com/download?plat=lnx.x86_64" && tar xzf ~/dropbox-installer
+#rm ~/dropbox-installer
 
 #remap caplock to esc
 #sudo setxkbmap -option caps:escape
