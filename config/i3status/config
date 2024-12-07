@@ -4,14 +4,14 @@ general {
 }
 
 order += "cpu_usage"
-order += "tztime local"
+order += "time"
 
 cpu_usage {
 	format = " %usage "
 	max_threshold = 70
 }
 
-tztime local {
+time {
 	format = " %d.%m.%Y. %H:%M "
 }
 

@@ -14,6 +14,8 @@ sudo pacman -S --noconfirm htop
 sudo pacman -S --noconfirm pacman-contrib
 sudo pacman -S --noconfirm openssh
 sudo pacman -S --noconfirm unzip
+sudo pacman -S --noconfirm tree
+sudo pacman -S --noconfirm xclip
 
 #pacman -- GUI -- Xorg
 sudo pacman -S --noconfirm xorg
@@ -35,8 +37,9 @@ sudo pacman -S --noconfirm extra/ttf-ubuntu-font-family
 #pacman -- Applications
 sudo pacman -S --noconfirm torbrowser-launcher
 sudo pacman -S --noconfirm sxiv
-sudo pacman -S --noconfirm gedit
+sudo pacman -S --noconfirm geany
 sudo pacman -S --noconfirm keepassxc
+sudo pacman -S --noconfirm veracrypt
 sudo pacman -S --noconfirm go
 sudo pacman -S --noconfirm docker
 sudo pacman -S --noconfirm gparted
@@ -66,8 +69,9 @@ cd ~/yay-git && makepkg -si --noconfirm
 rm -rf ~/yay-git
 
 #yay -- applications
+yay -Sy --noconfirm librewolf-bin
+yay -Sy --noconfirm obsidian
 #yay -Sy --noconfirm google-chrome
-#yay -Sy --noconfirm obsidian
 
 #Install beeper
 #sudo wget -O /usr/local/bin/beeper https://download.beeper.com/linux/appImage/x64
@@ -139,3 +143,5 @@ sudo bash -c 'echo "timeout 0" >> /boot/loader/loader.conf'
 sudo chsh -s `which fish`
 echo 'Enter password for fish shell inegration'
 chsh -s `which fish`
+
+echo "! ! ! Do not forget to edit timestamps settings for VeraCrypt"
