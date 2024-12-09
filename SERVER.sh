@@ -2,6 +2,7 @@
 sudo pacman -S --noconfirm cockpit
 sudo pacman -S --noconfirm cockpit-storaged
 sudo pacman -S --noconfirm cockpit-pcp
+sudo pacman -S --noconfirm cockpit-packagekit
 sudo pacman -S --noconfirm firewalld
 sudo pacman -S --noconfirm udusks2
 
@@ -20,4 +21,4 @@ docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /va
 sudo pacman -S --noconfirm syncthing
 
 # remove latop lid
-sudo echo "HandleLidSwitch=ignore" > /etc/systemd/logind.conf
+echo "HandleLidSwitch=ignore" | sudo tee -a /etc/systemd/logind.conf
