@@ -18,43 +18,43 @@ sudo pacman -S --noconfirm tree
 sudo pacman -S --noconfirm xclip
 
 #pacman -- GUI -- Xorg
-sudo pacman -S --noconfirm xorg
-sudo pacman -S --noconfirm xorg-server
-sudo pacman -S --noconfirm xorg-apps
-sudo pacman -S --noconfirm xorg-xinit
-sudo pacman -S --noconfirm extra/xorg-setxkbmap
+#sudo pacman -S --noconfirm xorg
+#sudo pacman -S --noconfirm xorg-server
+#sudo pacman -S --noconfirm xorg-apps
+#sudo pacman -S --noconfirm xorg-xinit
+#sudo pacman -S --noconfirm extra/xorg-setxkbmap
 
 #pacman -- Desktop
-sudo pacman -S --noconfirm i3-gaps
-sudo pacman -S --noconfirm i3status
-sudo pacman -S --noconfirm i3blocks
-sudo pacman -S --noconfirm nautilus
-sudo pacman -S --noconfirm rxvt-unicode
-sudo pacman -S --noconfirm urxvt-perls
-sudo pacman -S --noconfirm dmenu
-sudo pacman -S --noconfirm extra/ttf-ubuntu-font-family
+#sudo pacman -S --noconfirm i3-gaps
+#sudo pacman -S --noconfirm i3status
+#sudo pacman -S --noconfirm i3blocks
+#sudo pacman -S --noconfirm nautilus
+#sudo pacman -S --noconfirm rxvt-unicode
+#sudo pacman -S --noconfirm urxvt-perls
+#sudo pacman -S --noconfirm dmenu
+#sudo pacman -S --noconfirm extra/ttf-ubuntu-font-family
 
 #pacman -- Applications
-sudo pacman -S --noconfirm torbrowser-launcher
-sudo pacman -S --noconfirm sxiv
-sudo pacman -S --noconfirm geany
-sudo pacman -S --noconfirm keepassxc
-sudo pacman -S --noconfirm veracrypt
-sudo pacman -S --noconfirm go
-sudo pacman -S --noconfirm docker
-sudo pacman -S --noconfirm gparted
-sudo pacman -S --noconfirm mat2
-sudo pacman -S --noconfirm perl-image-exiftool
+#sudo pacman -S --noconfirm torbrowser-launcher
+#sudo pacman -S --noconfirm sxiv
+#sudo pacman -S --noconfirm geany
+#sudo pacman -S --noconfirm keepassxc
+#sudo pacman -S --noconfirm veracrypt
+#sudo pacman -S --noconfirm go
+#sudo pacman -S --noconfirm docker
+#sudo pacman -S --noconfirm gparted
+#sudo pacman -S --noconfirm mat2
+#sudo pacman -S --noconfirm perl-image-exiftool
 
 #pacman -- Applications -- additional
-sudo pacman -S --noconfirm arandr
-sudo pacman -S --noconfirm evince
-sudo pacman -S --noconfirm galculator
-sudo pacman -S --noconfirm pamixer
-sudo pacman -S --noconfirm vlc
-sudo pacman -S --noconfirm libreoffice
-sudo pacman -S --noconfirm transmission-gtk
-sudo pacman -S --noconfirm flameshot
+#sudo pacman -S --noconfirm arandr
+#sudo pacman -S --noconfirm evince
+#sudo pacman -S --noconfirm galculator
+#sudo pacman -S --noconfirm pamixer
+#sudo pacman -S --noconfirm vlc
+#sudo pacman -S --noconfirm libreoffice
+#sudo pacman -S --noconfirm transmission-gtk
+#sudo pacman -S --noconfirm flameshot
 #sudo pacman -S --noconfirm spotify-launcher
 #sudo pacman -S --noconfirm feh
 #sudo pacman -S --noconfirm python-pywal
@@ -69,8 +69,8 @@ cd ~/yay-git && makepkg -si --noconfirm
 rm -rf ~/yay-git
 
 #yay -- applications
-yay -Sy --noconfirm librewolf-bin
-yay -Sy --noconfirm obsidian
+#yay -Sy --noconfirm librewolf-bin
+#yay -Sy --noconfirm obsidian
 #yay -Sy --noconfirm google-chrome
 
 #Install beeper
@@ -90,37 +90,37 @@ PWD=`pwd`;
 # Make symbolic links
 ln -sf "$PWD/vimrc" ~/.vimrc
 ln -sf "$PWD/gitconfig" ~/.gitconfig
-ln -sf "$PWD/xinitrc" ~/.xinitrc
-ln -sf "$PWD/Xresources" ~/.Xresources
-ln -sf "$PWD/profile" ~/.profile
+#ln -sf "$PWD/xinitrc" ~/.xinitrc
+#ln -sf "$PWD/Xresources" ~/.Xresources
+#ln -sf "$PWD/profile" ~/.profile
 
 sudo ln -sf "$PWD/vimrc" /root/.vimrc
 sudo ln -sf "$PWD/gitconfig" /root/.gitconfig
-sudo ln -sf "$PWD/xinitrc" /root/.xinitrc
-sudo ln -sf "$PWD/Xresources" /root/.Xresources
-sudo ln -sf "$PWD/profile" /root/.profile
+#sudo ln -sf "$PWD/xinitrc" /root/.xinitrc
+#sudo ln -sf "$PWD/Xresources" /root/.Xresources
+#sudo ln -sf "$PWD/profile" /root/.profile
 
 #Make folders if they don't exist
-mkdir -p ~/.config
-mkdir -p ~/.config/i3
-mkdir -p ~/.config/i3status
+#mkdir -p ~/.config
+#mkdir -p ~/.config/i3
+#mkdir -p ~/.config/i3status
 mkdir -p ~/.config/fish
 
-sudo mkdir -p /root/.config
-sudo mkdir -p /root/.config/i3
-sudo mkdir -p /root/.config/i3status
+#sudo mkdir -p /root/.config
+#sudo mkdir -p /root/.config/i3
+#sudo mkdir -p /root/.config/i3status
 sudo mkdir -p /root/.config/fish
 
 #i3 syslink
-ln -sf "$PWD/config/i3/config" ~/.config/i3/config
-ln -sf "$PWD/config/i3status/config" ~/.config/i3status/config
-
-sudo ln -sf "$PWD/config/i3/config" /root/.config/i3/config
-sudo ln -sf "$PWD/config/i3status/config" /root/.config/i3status/config
-
-#redshift syslink
-ln -sf "$PWD/config/redshift.conf" ~/.config/redshift.conf
-sudo ln -sf "$PWD/config/redshift.conf" /root/.config/redshift.conf
+#ln -sf "$PWD/config/i3/config" ~/.config/i3/config
+#ln -sf "$PWD/config/i3status/config" ~/.config/i3status/config
+#
+#sudo ln -sf "$PWD/config/i3/config" /root/.config/i3/config
+#sudo ln -sf "$PWD/config/i3status/config" /root/.config/i3status/config
+#
+##redshift syslink
+#ln -sf "$PWD/config/redshift.conf" ~/.config/redshift.conf
+#sudo ln -sf "$PWD/config/redshift.conf" /root/.config/redshift.conf
 
 #fish syslink
 ln -sf "$PWD/config/fish/config.fish" ~/.config/fish/config.fish
