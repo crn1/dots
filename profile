@@ -1,8 +1,8 @@
 export TERM=urxvt
 export EDITOR=vim
 export PAGER=less
-export BROWSER=google-chrome-stable
-export MAILCLIENT=google-chrome-stable
+export BROWSER=librewolf
+export MAILCLIENT=librewolf
 export GIT_EDITOR=vim
 export VISUAL=gedit
 export PDFREADER=evince
