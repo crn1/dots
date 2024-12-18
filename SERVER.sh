@@ -125,7 +125,7 @@ ln -sf "$DOTS/server-configs/nginx-proxy-manager.yml" ~/nginx-proxy-manager/dock
 echo "HandleLidSwitch=ignore" | sudo tee -a /etc/systemd/logind.conf
 
 # Update Grub
-ln -sf "$DOTS/grub" /etc/default/grub
+sudo cp -sf "$DOTS/grub" /etc/default/grub
 sudo update-grub
 
 #Set and configure fish shell
