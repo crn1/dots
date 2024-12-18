@@ -1,4 +1,5 @@
 #pacman -- General
+sudo pacman -Syu
 sudo pacman -Syy
 sudo pacman -S --noconfirm fish
 sudo pacman -S --noconfirm python

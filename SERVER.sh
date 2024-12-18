@@ -59,6 +59,8 @@ yay -Sy --noconfirm cockpit-navigator
 #cockpit - run
 sudo systemctl enable cockpit
 sudo systemctl start cockpit
+sudo systemctl enable firewalld
+sudo systemctl start firewalld
 sudo firewall-cmd --permanent --add-service=cockpit
 sudo firewall-cmd --reload
 
@@ -87,7 +89,7 @@ ln -sf "$DOTS/server-configs/gitea.yml" ~/gitea/docker-compose.yml
 )
 
 #calcom
-git clone https://github.com/calcom/docker.git calcom
+git clone https://github.com/calcom/docker.git ~/calcom
 ln -sf "$DOTS/server-configs/calcom.env" ~/calcom/.env
 ln -sf "$DOTS/server-configs/calcom.yml" ~/calcom/docker-compose.yml
 (
@@ -101,7 +103,7 @@ mkdir -p ~/.jitsi-meet-cfg/{web,transcripts,prosody/config,prosody/prosody-plugi
 #Make this good again
 
 #Matrix Synapse
-mkdir -p matrix-synapse
+mkdir -p ~/matrix-synapse
 ln -sf "$DOTS/server-configs/matrix-synapse.yml" ~/matrix-synapse/docker-compose.yml
 (
 	cd ~/matrix-synapse
@@ -111,7 +113,7 @@ ln -sf "$DOTS/server-configs/matrix-synapse.yml" ~/matrix-synapse/docker-compose
 #make this better
 
 #nginx proxy manager
-mkdir -p nginx-proxy-manager
+mkdir -p ~/nginx-proxy-manager
 ln -sf "$DOTS/server-configs/nginx-proxy-manager.yml" ~/nginx-proxy-manager/docker-compose.yml
 (
 	cd ~/nginx-proxy-manager
@@ -132,4 +134,3 @@ chsh -s `which fish`
 #sudo firewall-cmd --reload
 echo '!!! Make sure to change CalCom password in config !!!'
 echo '!!! Make sure to change Gitea password in config !!!'
-echo '!!!  !!!'
