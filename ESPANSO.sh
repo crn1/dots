@@ -5,7 +5,7 @@ sudo wget -O /usr/local/bin/espanso 'https://github.com/federico-terzi/espanso/r
 sudo chmod +x /usr/local/bin/espanso
 
 cd ~/dots
-PWD=`pwd`;
+DOTS=`pwd`;
 
 git clone git@github.com:crn1/espanso-dots.git config/espanso/match
 
@@ -14,5 +14,5 @@ rm -rf ~/.config/espanso/match
 sudo rm -rf /root/.config/espanso/match
 
 # Make symlinks
-ln -sf "$PWD/config/espanso/match" ~/.config/espanso/
-sudo ln -sf "$PWD/config/espanso/match" /root/.config/espanso/
+ln -sf "$DOTS/config/espanso/match" ~/.config/espanso/
+sudo ln -sf "$DOTS/config/espanso/match" /root/.config/espanso/
