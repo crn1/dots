@@ -91,7 +91,7 @@ ln -sf "$DOTS/server-configs/gitea.yml" ~/gitea/docker-compose.yml
 #calcom
 git clone https://github.com/calcom/docker.git ~/calcom
 ln -sf "$DOTS/server-configs/calcom.env" ~/calcom/.env
-ln -sf "$DOTS/server-configs/calcom.yml" ~/calcom/docker-compose.yml
+ln -sf "$DOTS/server-configs/calcom.yaml" ~/calcom/docker-compose.yaml
 (
 	cd ~/calcom || exit
 	docker-compose up -d
