@@ -98,7 +98,7 @@ ln -sf "$DOTS/server-configs/calcom.yml" ~/calcom/docker-compose.yml
 )
 
 #Jitsi
-wget $(curl -s https://api.github.com/repos/jitsi/docker-jitsi-meet/releases/latest | grep 'zip' | cut -d\" -f4)
+wget $(curl -s https://api.github.com/repos/jitsi/docker-jitsi-meet/releases/latest | grep 'zip' | cut -d\" -f4) -P ~/
 mkdir -p ~/.jitsi-meet-cfg/{web,transcripts,prosody/config,prosody/prosody-plugins-custom,jicofo,jvb,jigasi,jibri}
 #Make this good again
 
@@ -123,6 +123,10 @@ ln -sf "$DOTS/server-configs/nginx-proxy-manager.yml" ~/nginx-proxy-manager/dock
 
 # remove latop lid
 echo "HandleLidSwitch=ignore" | sudo tee -a /etc/systemd/logind.conf
+
+# Update Grub
+ln -sf "$DOTS/grub" /etc/default/grub
+sudo update-grub
 
 #Set and configure fish shell
 sudo chsh -s `which fish`
