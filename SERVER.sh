@@ -6,6 +6,7 @@ sudo pacman -S --noconfirm ranger
 sudo pacman -S --noconfirm python-pip
 sudo pacman -S --noconfirm wget
 sudo pacman -S --noconfirm curl
+sudo pacman -S --noconfirm less
 sudo pacman -S --noconfirm vim
 sudo pacman -S --noconfirm git
 sudo pacman -S --noconfirm gcc
