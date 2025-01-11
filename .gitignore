@@ -4,6 +4,7 @@ espanso/
 config/espanso
 config/espanso/
 
+.st_versions
 fish_variables
 
 .env

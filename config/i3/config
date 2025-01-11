@@ -19,6 +19,7 @@ bindsym $mod+p exec keepassxc
 bindsym $mod+t exec beeper
 #OBSIDIAN
 bindsym $mod+o exec obsidian
+bindsym $mod+c exec thunderbird
 
 # Audio control
 # Pulse Audio controls
