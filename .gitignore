@@ -5,6 +5,10 @@ config/espanso
 config/espanso/
 
 .st_versions
+.stfolder
+.st_versions/
+.stfolder/
+
 fish_variables
 
 .env
