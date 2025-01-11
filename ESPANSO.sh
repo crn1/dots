@@ -6,6 +6,7 @@ sudo chmod +x /usr/local/bin/espanso
 
 cd ~/dots
 DOTS=`pwd`;
+THISUSER=`whoami`;
 
 git clone git@github.com:crn1/espanso-dots.git config/espanso/match
 

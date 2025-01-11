@@ -1,0 +1,12 @@
+ [Unit]
+ Description=Cloudflare Tunnel
+ After=network.target
+
+ [Service]
+ ExecStart=/usr/bin/cloudflared tunnel run
+ Restart=on-failure
+ User=crn1
+ #WorkingDirectory=/home/<USER>/.cloudflared
+
+ [Install]
+ WantedBy=multi-user.target

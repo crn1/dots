@@ -12,6 +12,6 @@ cpu_usage {
 }
 
 time {
-	format = " %d.%m.%Y. %H:%M "
+	format = " %d.%m.%Y. | %H:%M "
 }
 

@@ -2,9 +2,9 @@ export TERM=urxvt
 export EDITOR=vim
 export PAGER=less
 export BROWSER=librewolf
-export MAILCLIENT=librewolf
+export MAILCLIENT=thunderbird
 export GIT_EDITOR=vim
-export VISUAL=gedit
+export VISUAL=geany
 export PDFREADER=evince
 
 # Query terminal size; useful for serial lines.

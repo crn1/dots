@@ -4,21 +4,21 @@ exec --no-startup-id redshift
 #exec espanso
 exec --no-startup-id espanso
 
-#crn1 i3 config sekcija
+#i3 config sekcija
 for_window [class="^.*"] border pixel 0px
 smart_gaps on
 
 # run programs keyboard shortcuts
-bindsym $mod+g exec librewolf
-bindsym $mod+n exec nautilus
-bindsym $mod+m exec spotify-launcher
-bindsym $mod+s exec flameshot
+#BROWSER
+bindsym $mod+b exec librewolf
+#FILE EXPLORER
+bindsym $mod+e exec nautilus
+#PASSWORD MANAGER
 bindsym $mod+p exec keepassxc
-bindsym $mod+t exec galculator
-bindsym $mod+b exec beeper
+#TEXTING
+bindsym $mod+t exec beeper
+#OBSIDIAN
 bindsym $mod+o exec obsidian
-bindsym $mod+v exec veracrypt --mount /home/crn1/syncthing/vault.hc
-bindsym $mod+w exec veracrypt -d
 
 # Audio control
 # Pulse Audio controls

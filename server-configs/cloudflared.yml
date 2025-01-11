@@ -1,0 +1,7 @@
+tunnel:
+credentials-file: /home/user/.cloudflared/
+
+ingress:
+  - hostname: subdomain.example.com
+    service: http://localhost:3000
+  - service: http_status:404

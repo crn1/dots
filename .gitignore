@@ -5,3 +5,6 @@ config/espanso
 config/espanso/
 
 fish_variables
+
+.env
+*.env

@@ -40,7 +40,6 @@ sudo pacman -S --noconfirm torbrowser-launcher
 sudo pacman -S --noconfirm sxiv
 sudo pacman -S --noconfirm geany
 sudo pacman -S --noconfirm keepassxc
-sudo pacman -S --noconfirm veracrypt
 sudo pacman -S --noconfirm go
 sudo pacman -S --noconfirm docker
 sudo pacman -S --noconfirm gparted
@@ -88,6 +87,7 @@ yay -Sy --noconfirm obsidian
 
 cd ~/dots
 DOTS=`pwd`;
+THISUSER=`whoami`;
 
 # Make symbolic links
 ln -sf "$DOTS/vimrc" ~/.vimrc
@@ -143,5 +143,3 @@ sudo bash -c 'echo "timeout 0" >> /boot/loader/loader.conf'
 sudo chsh -s `which fish`
 echo 'Enter password for fish shell inegration'
 chsh -s `which fish`
-
-echo "! ! ! Do not forget to edit timestamps settings for VeraCrypt"
