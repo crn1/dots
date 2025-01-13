@@ -9,18 +9,12 @@ for_window [class="^.*"] border pixel 0px
 smart_gaps on
 
 # run programs keyboard shortcuts
-#BROWSER
-bindsym $mod+b exec librewolf
-#FILE EXPLORER
-bindsym $mod+e exec nautilus
-#PASSWORD MANAGER
-bindsym $mod+p exec keepassxc
-#TEXTING
-bindsym $mod+t exec beeper
-#OBSIDIAN
+bindsym $mod+l exec librewolf
+bindsym $mod+n exec nautilus
+bindsym $mod+k exec keepassxc
+bindsym $mod+b exec beeper
 bindsym $mod+o exec obsidian
-#MAIL
-bindsym $mod+m exec thunderbird
+bindsym $mod+t exec thunderbird
 
 # Audio control
 # Pulse Audio controls
