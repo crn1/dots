@@ -15,6 +15,7 @@ abbr --add ..... cd .....
 abbr --add v vim
 abbr --add r ranger
 abbr --add py python
+abbr --add trans "python ~/syncthing/transactor/transactor.py"
 
 # Machine Control Abbreviations
 abbr --add of sudo poweroff

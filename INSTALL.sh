@@ -34,6 +34,7 @@ sudo pacman -S --noconfirm rxvt-unicode
 sudo pacman -S --noconfirm urxvt-perls
 sudo pacman -S --noconfirm dmenu
 sudo pacman -S --noconfirm extra/ttf-ubuntu-font-family
+sudo pacman -S --noconfirm volumeicon
 
 #pacman -- Applications
 sudo pacman -S --noconfirm torbrowser-launcher

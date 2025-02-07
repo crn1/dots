@@ -4,6 +4,12 @@ exec --no-startup-id redshift
 #exec espanso
 exec --no-startup-id espanso
 
+#exec espanso
+exec --no-startup-id espanso
+
+#exec volumeicon
+exec --no-startup-id volumeicon
+
 #i3 config sekcija
 for_window [class="^.*"] border pixel 0px
 smart_gaps on
@@ -14,7 +20,6 @@ bindsym $mod+n exec nautilus
 bindsym $mod+k exec keepassxc
 bindsym $mod+b exec beeper
 bindsym $mod+o exec obsidian
-bindsym $mod+t exec thunderbird
 
 # Audio control
 # Pulse Audio controls
@@ -72,10 +77,10 @@ bindsym $mod+d exec dmenu_run
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
+#bindsym $mod+h focus left
+#bindsym $mod+j focus down
+#bindsym $mod+k focus up
+#bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
